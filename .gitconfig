@@ -1,0 +1,26 @@
+[core]
+	autocrlf = true
+	safecrlf = true
+[user]
+	name = Kevin Kleine
+	email = kevin.kleine@softekinc.com
+[alias]
+	co = checkout
+	ci = commit
+	st = status
+	br = branch
+	hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+	type = cat-file -t
+	dump = cat-file -p
+	pvtool = Clinical.Patient.Client
+[merge]
+	tool = p4merge
+[mergetool "diffmerge"]
+	cmd = diffmerge.exe /\"$BASE/\" /\"$LOCAL/\" /\"$REMOTE/\" /\"$MERGED/\"
+[mergetool "p4merge"]
+	cmd = \"C:/Program Files/Perforce/p4merge.exe\" \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
+	path = C:/Program Files/Perforce/p4merge.exe
+[diff]
+	guitool = kdiff3
+[push]
+	default = upstream
